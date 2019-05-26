@@ -16,9 +16,12 @@ public class ArrayListEx{
 	System.out.print("Salary : ");
 	int sal=scan.nextInt();
 	if(i<n)System.out.println("Please give next Emp Details : ");
-	ArrayList<Employee> emp=new ArrayList<Employee>();
+	ArrayList emp=new ArrayList();
 	Employee e = new Employee(empName,sal,dept);
-	emp.add(e);
+	emp.add(e.name);
+	emp.add(e.salary);
+	emp.add(e.dept);
+	
 	empMap.put(empId,emp);
 	}
 	scan.close(); 
