@@ -30,22 +30,28 @@ public class ArrayListEx{
 
 	Map<Character,ArrayList> grdMap=new Hashtable<Character,ArrayList>();
 
-	ArrayList<Grade> gr=new ArrayList<Grade>();
+	ArrayList gr1=new ArrayList();
 	Grade a=new Grade(1000,4999);
-	gr.add(a);
-	grdMap.put('A',gr);
+	gr1.add(a.lowSal);
+	gr1.add(a.highSal);
+	grdMap.put('A',gr1);
 
+	ArrayList gr2=new ArrayList();
 	Grade b=new Grade(5000,14999);
-	gr.add(b);
-	grdMap.put('B',gr);
+	gr2.add(b.lowSal);
+	gr2.add(b.highSal);
+	grdMap.put('B',gr2);
 
+	ArrayList gr3=new ArrayList();
 	Grade c=new Grade(15000,29999);
-	gr.add(c); 
-	grdMap.put('C',gr);
+	gr3.add(c.lowSal);
+	gr3.add(c.highSal); 
+	grdMap.put('C',gr3);
 	
 		
 	System.out.println(grdMap);
-	System.out.println(grdMap.get('A'));
+	
+	System.out.println("A Grade Value is : "+grdMap.get('A'));
 	
 	Iterator itr = grdMap.keySet().iterator();
 
@@ -54,13 +60,8 @@ public class ArrayListEx{
 			
 	System.out.println(itr.next());
 	}
-	Iterator it=gr.iterator();  
-  
-  while(it.hasNext()){  
-    Grade gritr=(Grade)it.next();  
-    System.out.println(gritr.lowSal+" "+gritr.highSal);  
-  } 
-	// getting values for key.
+	
+	// getting values for key "11"
 	System.out.println(empMap.get(11));
 
 	Set s = empMap.entrySet(); 
